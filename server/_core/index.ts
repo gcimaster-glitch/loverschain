@@ -40,6 +40,9 @@ async function startServer() {
   const app = express();
   const server = createServer(app);
 
+  // Renderなどのリバースプロキシ経由でHTTPSを正しく認識させる
+  app.set("trust proxy", 1);
+
   // Stripe webhook MUST use raw body — register BEFORE express.json()
   app.post(
     "/api/stripe/webhook",

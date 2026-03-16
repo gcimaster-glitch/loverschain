@@ -17,9 +17,10 @@ const LINE_PROFILE_URL = "https://api.line.me/v2/profile";
 const LINE_VERIFY_URL = "https://api.line.me/oauth2/v2.1/verify";
 
 function getCallbackUrl(req: Request): string {
-  // フロントエンドのoriginをクエリパラメータから取得、なければリクエストのoriginを使用
+  // APP_URLが設定されている場合はそれを使用（Renderなどのリバースプロキシ対応）
   const origin =
     (req.query.origin as string) ||
+    ENV.appUrl ||
     `${req.protocol}://${req.get("host")}`;
   return `${origin}/api/auth/line/callback`;
 }
@@ -34,7 +35,7 @@ export function registerLineAuthRoutes(app: Express) {
 
     const state = crypto.randomBytes(16).toString("hex");
     const returnPath = (req.query.returnPath as string) || "/dashboard";
-    const origin = (req.query.origin as string) || `${req.protocol}://${req.get("host")}`;
+    const origin = (req.query.origin as string) || ENV.appUrl || `${req.protocol}://${req.get("host")}`;
 
     // stateにreturnPathとoriginを埋め込む（既存のManus OAuthと同じ形式）
     const statePayload = Buffer.from(`${origin}|${origin}${returnPath}`).toString("base64");
@@ -81,7 +82,7 @@ export function registerLineAuthRoutes(app: Express) {
 
     try {
       // stateからoriginを復元
-      let origin = `${req.protocol}://${req.get("host")}`;
+      let origin = ENV.appUrl || `${req.protocol}://${req.get("host")}`;
       let redirectTo = "/dashboard";
       try {
         const decoded = Buffer.from(state, "base64").toString("utf8");

@@ -22,7 +22,7 @@ export function registerGoogleAuthRoutes(app: Express) {
       return;
     }
     const returnPath = (req.query.returnPath as string) || "/dashboard";
-    const origin = (req.query.origin as string) || `${req.protocol}://${req.get("host")}`;
+    const origin = (req.query.origin as string) || ENV.appUrl || `${req.protocol}://${req.get("host")}`;
     // stateにreturnPathとoriginを埋め込む（LINEと同じ形式）
     const statePayload = Buffer.from(`${origin}|${origin}${returnPath}`).toString("base64");
     const params = new URLSearchParams({
@@ -56,7 +56,7 @@ export function registerGoogleAuthRoutes(app: Express) {
 
     try {
       // stateからoriginを復元
-      let origin = `${req.protocol}://${req.get("host")}`;
+      let origin = ENV.appUrl || `${req.protocol}://${req.get("host")}`;
       let redirectTo = "/dashboard";
       try {
         const decoded = Buffer.from(state, "base64").toString("utf8");
