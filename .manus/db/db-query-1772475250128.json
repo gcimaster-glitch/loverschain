@@ -1,0 +1,18 @@
+{
+  "query": "SHOW COLUMNS FROM partnerships LIKE 'status';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SHOW COLUMNS FROM partnerships LIKE 'status';",
+  "rows": [
+    {
+      "Field": "status",
+      "Type": "enum('green','engaged','yellow','gray','blue','white')",
+      "Null": "NO",
+      "Key": "",
+      "Default": "green",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\nstatus\tenum('green','engaged','yellow','gray','blue','white')\tNO\t\tgreen\t\n",
+  "stderr": "",
+  "execution_time_ms": 2046
+}

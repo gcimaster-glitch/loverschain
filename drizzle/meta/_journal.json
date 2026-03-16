@@ -1,0 +1,104 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1772273028877,
+      "tag": "0000_famous_gauntlet",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1772273174386,
+      "tag": "0001_ordinary_luckman",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1772279078226,
+      "tag": "0002_grey_shinko_yamashiro",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1772296667025,
+      "tag": "0003_slippery_toro",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1772327750411,
+      "tag": "0004_equal_red_shift",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1772333423870,
+      "tag": "0005_wandering_nightmare",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "5",
+      "when": 1772340250172,
+      "tag": "0006_striped_sabretooth",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "5",
+      "when": 1772414705297,
+      "tag": "0007_cute_wendigo",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "5",
+      "when": 1772478592582,
+      "tag": "0008_mysterious_stardust",
+      "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "5",
+      "when": 1772480982378,
+      "tag": "0009_military_screwball",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "5",
+      "when": 1772543333752,
+      "tag": "0010_legal_inertia",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "5",
+      "when": 1772596655819,
+      "tag": "0011_lowly_zzzax",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "5",
+      "when": 1772985032209,
+      "tag": "0012_plain_manta",
+      "breakpoints": true
+    },
+    {
+      "idx": 13,
+      "version": "5",
+      "when": 1773040002351,
+      "tag": "0013_faithful_professor_monster",
+      "breakpoints": true
+    }
+  ]
+}

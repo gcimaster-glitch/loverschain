@@ -1,0 +1,28 @@
+{
+  "query": "SELECT id, userId, orderType, amountJpy, status, createdAt, stripeCheckoutSessionId FROM payment_orders ORDER BY createdAt DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SELECT id, userId, orderType, amountJpy, status, createdAt, stripeCheckoutSessionId FROM payment_orders ORDER BY createdAt DESC LIMIT 10;",
+  "rows": [
+    {
+      "id": "30001",
+      "userId": "1170012",
+      "orderType": "partnership_lover",
+      "amountJpy": "66",
+      "status": "completed",
+      "createdAt": "2026-03-08 15:32:43",
+      "stripeCheckoutSessionId": "cs_live_b1wy5x09aQV2GuLXMru4PiZxRddfoMok7H2bCjslzSAShqmzwX6dOcuzwJ"
+    },
+    {
+      "id": "1",
+      "userId": "360068",
+      "orderType": "partnership_lover",
+      "amountJpy": "6600",
+      "status": "completed",
+      "createdAt": "2026-03-04 03:50:53",
+      "stripeCheckoutSessionId": "cs_live_b1t10Rhjx6W5ioAqjJvGCGfUAabNquB7GJGiVYpzVqglWWL9TcVz7663FG"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tuserId\torderType\tamountJpy\tstatus\tcreatedAt\tstripeCheckoutSessionId\n30001\t1170012\tpartnership_lover\t66\tcompleted\t2026-03-08 15:32:43\tcs_live_b1wy5x09aQV2GuLXMru4PiZxRddfoMok7H2bCjslzSAShqmzwX6dOcuzwJ\n1\t360068\tpartnership_lover\t6600\tcompleted\t2026-03-04 03:50:53\tcs_live_b1t10Rhjx6W5ioAqjJvGCGfUAabNquB7GJGiVYpzVqglWWL9TcVz7663FG\n",
+  "stderr": "",
+  "execution_time_ms": 1625
+}

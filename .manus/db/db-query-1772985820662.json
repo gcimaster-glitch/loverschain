@@ -1,0 +1,18 @@
+{
+  "query": "SELECT id, name, email, pendingPlanType, pendingPlanPaidAt, kycStatus FROM users WHERE id = 360068;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SELECT id, name, email, pendingPlanType, pendingPlanPaidAt, kycStatus FROM users WHERE id = 360068;",
+  "rows": [
+    {
+      "id": "360068",
+      "name": "Tetsuji Iwama",
+      "email": "wish.ceo@icloud.com",
+      "pendingPlanType": "lover",
+      "pendingPlanPaidAt": "2026-03-04 03:50:53",
+      "kycStatus": "failed"
+    }
+  ],
+  "messages": [],
+  "stdout": "id\tname\temail\tpendingPlanType\tpendingPlanPaidAt\tkycStatus\n360068\tTetsuji Iwama\twish.ceo@icloud.com\tlover\t2026-03-04 03:50:53\tfailed\n",
+  "stderr": "",
+  "execution_time_ms": 1597
+}

@@ -1,0 +1,50 @@
+{
+  "query": "SELECT u.id, u.name, u.email, u.pendingPlanType, u.pendingPlanPaidAt, u.stripeCustomerId, u.kycStatus FROM users u ORDER BY u.createdAt DESC;\n\nSELECT po.id, po.userId, po.orderType, po.amountJpy, po.status, po.createdAt FROM payment_orders po ORDER BY po.createdAt DESC;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SELECT u.id, u.name, u.email, u.pendingPlanType, u.pendingPlanPaidAt, u.stripeCustomerId, u.kycStatus FROM users u ORDER BY u.createdAt DESC;\n\nSELECT po.id, po.userId, po.orderType, po.amountJpy, po.status, po.createdAt FROM payment_orders po ORDER BY po.createdAt DESC;",
+  "rows": [
+    {
+      "id": "1170012",
+      "name": "岩間哲士（ganma）",
+      "email": "gcimaster@gmail.com",
+      "pendingPlanType": "lover",
+      "pendingPlanPaidAt": "2026-03-08 15:32:43",
+      "stripeCustomerId": "NULL",
+      "kycStatus": "verified"
+    },
+    {
+      "id": "810074",
+      "name": "岩間哲士",
+      "email": "iwama@inre.co.jp",
+      "pendingPlanType": "NULL",
+      "pendingPlanPaidAt": "NULL",
+      "stripeCustomerId": "NULL",
+      "kycStatus": "verified"
+    },
+    {
+      "id": "360068",
+      "name": "Tetsuji Iwama",
+      "email": "wish.ceo@icloud.com",
+      "pendingPlanType": "lover",
+      "pendingPlanPaidAt": "2026-03-04 03:50:53",
+      "stripeCustomerId": "NULL",
+      "kycStatus": "failed"
+    },
+    {
+      "id": "1",
+      "name": "哲士 岩間",
+      "email": "gcimaster@gmail.com",
+      "pendingPlanType": "NULL",
+      "pendingPlanPaidAt": "NULL",
+      "stripeCustomerId": "cus_U4UIux7VmwY7n4",
+      "kycStatus": "verified"
+    }
+  ],
+  "messages": [
+    "id\tuserId\torderType\tamountJpy\tstatus\tcreatedAt",
+    "30001\t1170012\tpartnership_lover\t66\tcompleted\t2026-03-08 15:32:43",
+    "1\t360068\tpartnership_lover\t6600\tcompleted\t2026-03-04 03:50:53"
+  ],
+  "stdout": "id\tname\temail\tpendingPlanType\tpendingPlanPaidAt\tstripeCustomerId\tkycStatus\n1170012\t岩間哲士（ganma）\tgcimaster@gmail.com\tlover\t2026-03-08 15:32:43\tNULL\tverified\n810074\t岩間哲士\tiwama@inre.co.jp\tNULL\tNULL\tNULL\tverified\n360068\tTetsuji Iwama\twish.ceo@icloud.com\tlover\t2026-03-04 03:50:53\tNULL\tfailed\n1\t哲士 岩間\tgcimaster@gmail.com\tNULL\tNULL\tcus_U4UIux7VmwY7n4\tverified\nid\tuserId\torderType\tamountJpy\tstatus\tcreatedAt\n30001\t1170012\tpartnership_lover\t66\tcompleted\t2026-03-08 15:32:43\n1\t360068\tpartnership_lover\t6600\tcompleted\t2026-03-04 03:50:53\n",
+  "stderr": "",
+  "execution_time_ms": 1803
+}

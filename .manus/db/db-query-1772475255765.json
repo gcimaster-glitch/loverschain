@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'partnerships' AND COLUMN_NAME = 'status';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'partnerships' AND COLUMN_NAME = 'status';",
+  "rows": [
+    {
+      "COLUMN_TYPE": "enum('green','engaged','yellow','gray','blue','white')"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_TYPE\nenum('green','engaged','yellow','gray','blue','white')\n",
+  "stderr": "",
+  "execution_time_ms": 1576
+}

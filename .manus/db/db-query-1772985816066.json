@@ -1,0 +1,9 @@
+{
+  "query": "UPDATE users SET pendingPlanType = 'lover', pendingPlanPaidAt = '2026-03-04 03:50:53' WHERE id = 360068;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute UPDATE users SET pendingPlanType = 'lover', pendingPlanPaidAt = '2026-03-04 03:50:53' WHERE id = 360068;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1614
+}

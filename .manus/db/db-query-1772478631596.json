@@ -1,0 +1,9 @@
+{
+  "query": "-- payment_ordersのorderTypeを変換\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` varchar(50) NOT NULL;\nUPDATE `payment_orders` SET `orderType` = 'partnership_lover' WHERE `orderType` IN ('partnership_standard', 'partnership_high_school');\nUPDATE `payment_orders` SET `orderType` = 'partnership_engagement' WHERE `orderType` = 'partnership_marriage';\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute -- payment_ordersのorderTypeを変換\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` varchar(50) NOT NULL;\nUPDATE `payment_orders` SET `orderType` = 'partnership_lover' WHERE `orderType` IN ('partnership_standard', 'partnership_high_school');\nUPDATE `payment_orders` SET `orderType` = 'partnership_engagement' WHERE `orderType` = 'partnership_marriage';\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 2712
+}

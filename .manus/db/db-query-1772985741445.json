@@ -1,0 +1,55 @@
+{
+  "query": "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE();",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE();",
+  "rows": [
+    {
+      "TABLE_NAME": "users"
+    },
+    {
+      "TABLE_NAME": "sns_share_campaigns"
+    },
+    {
+      "TABLE_NAME": "referrals"
+    },
+    {
+      "TABLE_NAME": "push_subscriptions"
+    },
+    {
+      "TABLE_NAME": "physical_certificate_orders"
+    },
+    {
+      "TABLE_NAME": "payment_orders"
+    },
+    {
+      "TABLE_NAME": "partnerships"
+    },
+    {
+      "TABLE_NAME": "partnership_status_history"
+    },
+    {
+      "TABLE_NAME": "oem_agencies"
+    },
+    {
+      "TABLE_NAME": "notification_logs"
+    },
+    {
+      "TABLE_NAME": "invitations"
+    },
+    {
+      "TABLE_NAME": "dissolution_requests"
+    },
+    {
+      "TABLE_NAME": "coin_transactions"
+    },
+    {
+      "TABLE_NAME": "affiliate_partners"
+    },
+    {
+      "TABLE_NAME": "__drizzle_migrations"
+    }
+  ],
+  "messages": [],
+  "stdout": "TABLE_NAME\nusers\nsns_share_campaigns\nreferrals\npush_subscriptions\nphysical_certificate_orders\npayment_orders\npartnerships\npartnership_status_history\noem_agencies\nnotification_logs\ninvitations\ndissolution_requests\ncoin_transactions\naffiliate_partners\n__drizzle_migrations\n",
+  "stderr": "",
+  "execution_time_ms": 1675
+}

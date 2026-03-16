@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `partnerships` ADD `jAgreementRecordId` varchar(64);\nALTER TABLE `partnerships` ADD `blockchainBlockNumber` int;\nALTER TABLE `partnerships` ADD `blockchainConfirmedAt` timestamp;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute ALTER TABLE `partnerships` ADD `jAgreementRecordId` varchar(64);\nALTER TABLE `partnerships` ADD `blockchainBlockNumber` int;\nALTER TABLE `partnerships` ADD `blockchainConfirmedAt` timestamp;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 3841
+}

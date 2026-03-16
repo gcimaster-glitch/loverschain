@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `notification_logs` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`partnershipId` int NOT NULL,\n\t`userId` int NOT NULL,\n\t`milestoneLabel` varchar(100) NOT NULL,\n\t`milestoneDays` int NOT NULL,\n\t`status` enum('sent','failed') NOT NULL DEFAULT 'sent',\n\t`errorMessage` text,\n\t`sentAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `notification_logs_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute CREATE TABLE `notification_logs` (\n\t`id` int AUTO_INCREMENT NOT NULL,\n\t`partnershipId` int NOT NULL,\n\t`userId` int NOT NULL,\n\t`milestoneLabel` varchar(100) NOT NULL,\n\t`milestoneDays` int NOT NULL,\n\t`status` enum('sent','failed') NOT NULL DEFAULT 'sent',\n\t`errorMessage` text,\n\t`sentAt` timestamp NOT NULL DEFAULT (now()),\n\tCONSTRAINT `notification_logs_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1656
+}

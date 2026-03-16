@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','split_inviter','split_accepter','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;\nALTER TABLE `invitations` ADD `isSplitPayment` boolean DEFAULT false NOT NULL;\nALTER TABLE `invitations` ADD `inviterPaidAt` timestamp;\nALTER TABLE `invitations` ADD `accepterPaidAt` timestamp;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute ALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','split_inviter','split_accepter','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;\nALTER TABLE `invitations` ADD `isSplitPayment` boolean DEFAULT false NOT NULL;\nALTER TABLE `invitations` ADD `inviterPaidAt` timestamp;\nALTER TABLE `invitations` ADD `accepterPaidAt` timestamp;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 4426
+}

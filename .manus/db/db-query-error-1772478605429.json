@@ -1,0 +1,8 @@
+{
+  "query": "ALTER TABLE `invitations` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';\nALTER TABLE `partnerships` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute ALTER TABLE `invitations` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';\nALTER TABLE `partnerships` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';\nALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;",
+  "returncode": 1,
+  "logs": [
+    "ERROR 1265 (01000) at line 1: Data truncated for column 'planType', value is 'standard'"
+  ]
+}

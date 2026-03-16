@@ -1,0 +1,3 @@
+ALTER TABLE `invitations` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';--> statement-breakpoint
+ALTER TABLE `partnerships` MODIFY COLUMN `planType` enum('lover','engagement','student') NOT NULL DEFAULT 'lover';--> statement-breakpoint
+ALTER TABLE `payment_orders` MODIFY COLUMN `orderType` enum('partnership_lover','partnership_engagement','partnership_student','coin_purchase','renewal','physical_certificate','bank_transfer') NOT NULL;

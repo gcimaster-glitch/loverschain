@@ -1,0 +1,13 @@
+{
+  "query": "\nSELECT u.id, u.name, u.email, u.pendingPlanType, u.pendingPlanPaidAt, u.stripeCustomerId\nFROM users u\nORDER BY u.createdAt DESC\nLIMIT 5;\n\nSELECT po.id, po.userId, po.orderType, po.amountJpy, po.status, po.createdAt, po.stripeCheckoutSessionId\nFROM paymentOrders po\nORDER BY po.createdAt DESC\nLIMIT 10;\n",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3Go42u5Huy3hW8J.c14611683c97 --database Hwkz9ewQw48rtHqsLPREaH --execute \nSELECT u.id, u.name, u.email, u.pendingPlanType, u.pendingPlanPaidAt, u.stripeCustomerId\nFROM users u\nORDER BY u.createdAt DESC\nLIMIT 5;\n\nSELECT po.id, po.userId, po.orderType, po.amountJpy, po.status, po.createdAt, po.stripeCheckoutSessionId\nFROM paymentOrders po\nORDER BY po.createdAt DESC\nLIMIT 10;\n",
+  "returncode": 1,
+  "logs": [
+    "id\tname\temail\tpendingPlanType\tpendingPlanPaidAt\tstripeCustomerId",
+    "1170012\t岩間哲士（ganma）\tgcimaster@gmail.com\tlover\t2026-03-08 15:32:43\tNULL",
+    "810074\t岩間哲士\tiwama@inre.co.jp\tNULL\tNULL\tNULL",
+    "360068\tTetsuji Iwama\twish.ceo@icloud.com\tlover\t2026-03-04 03:50:53\tNULL",
+    "1\t哲士 岩間\tgcimaster@gmail.com\tNULL\tNULL\tcus_U4UIux7VmwY7n4",
+    "ERROR 1146 (42S02) at line 7: Table 'hwkz9ewqw48rthqslpreah.paymentOrders' doesn't exist"
+  ]
+}
