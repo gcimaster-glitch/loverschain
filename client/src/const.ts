@@ -21,6 +21,12 @@ export const getGoogleLoginUrl = (returnPath?: string) => {
 export const getLoginUrl = (returnPath?: string) => {
   const oauthPortalUrl = import.meta.env.VITE_OAUTH_PORTAL_URL;
   const appId = import.meta.env.VITE_APP_ID;
+
+  // OAuthポータルURLが未設定の場合はLINEログインにフォールバック
+  if (!oauthPortalUrl || !appId) {
+    return getLineLoginUrl(returnPath);
+  }
+
   const redirectUri = `${window.location.origin}/api/oauth/callback`;
   // stateにreturnPathを含める: base64(redirectUri + "|" + fullReturnUrl)
   const statePayload = returnPath
@@ -28,11 +34,14 @@ export const getLoginUrl = (returnPath?: string) => {
     : redirectUri;
   const state = btoa(statePayload);
 
-  const url = new URL(`${oauthPortalUrl}/app-auth`);
-  url.searchParams.set("appId", appId);
-  url.searchParams.set("redirectUri", redirectUri);
-  url.searchParams.set("state", state);
-  url.searchParams.set("type", "signIn");
-
-  return url.toString();
+  try {
+    const url = new URL(`${oauthPortalUrl}/app-auth`);
+    url.searchParams.set("appId", appId);
+    url.searchParams.set("redirectUri", redirectUri);
+    url.searchParams.set("state", state);
+    url.searchParams.set("type", "signIn");
+    return url.toString();
+  } catch {
+    return getLineLoginUrl(returnPath);
+  }
 };
