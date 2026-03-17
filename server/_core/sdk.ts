@@ -213,13 +213,12 @@ class SDKServer {
       const { openId, appId, name } = payload as Record<string, unknown>;
 
       if (
-        !isNonEmptyString(openId) ||
-        !isNonEmptyString(appId) ||
-        !isNonEmptyString(name)
+        !isNonEmptyString(openId)
       ) {
         console.warn("[Auth] Session payload missing required fields");
         return null;
       }
+      // appId and name are optional for LINE/Google login (non-Manus OAuth)
 
       return {
         openId,
